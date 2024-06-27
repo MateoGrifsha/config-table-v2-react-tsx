@@ -1,13 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import '~antd/dist/antd.css';
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: ghostwhite;
+}
+p{
+  margin: 0;
+}
+h2{
+  margin-bottom: 30px;
+}
+.main-container{
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 20px;
+}
+/* First Section */
+.first-section, .second-section{
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 3px 3px 5px rgb(218, 218, 218);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*Radio Group*/
+.radio-component{
+  width: 50%;
+  border-right: thin solid rgb(231, 231, 231);
+  padding-right: 20px;
+}
+.radio-component .ant-form-item-label {
+  width: 200px;
+  text-align: left;
+}
+.radio-component .ant-form-item-row{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.radio-component .ant-form-item-control-input-content{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.true-button.ant-radio-button-wrapper-checked{
+  background-color: #00743f !important;
+  border: thin solid #1d3e11 !important;
+}
+.false-button.ant-radio-button-wrapper-checked{
+  background-color: #BB2222 !important;
+  border: thin solid #5c0000 !important;
+}
+.true-button.ant-radio-button-wrapper:hover{
+  color: #54da23 !important;
+}
+.false-button.ant-radio-button-wrapper:hover{
+  color: #BB2222 !important;
+}
+.false-button.ant-radio-button-wrapper-checked:hover, 
+.true-button.ant-radio-button-wrapper-checked:hover{
+  color: white !important;
+}
+
+
+/*Date Group*/
+.date-input-group{
+  position: relative;
+  width: 50%;
+  padding-left: 20px;
+}
+.date-input-group .ant-row{
+  display: block;
+}
+.ant-input-number{
+  width: 100%;
+}
+.min-max-date-group{
+  width: 100%;
+  display: flex;
+}
+.min-max-date-group .ant-form-item{
+  width: 50%;
+}
+/* Second section */
+.second-section{
+  margin-block: 25px;
+}
+
+
+/* Tag Section */
+.tag-row-container{
+  width: 50%;
+  border-right: thin solid rgb(231, 231, 231);
+}
+.tag-selection-row{
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.tag-selection-row .ant-form-item{
+  margin-bottom: 0;
+}
+.tag-row-label{
+  width: 300px;
+}
+.ant-tag-checkable{
+  background-color: rgb(249, 249, 249);
+  margin-right: 4px;
+  padding: 4px 10px;
+
+}
+.ant-tag-checkable-checked{
+  background-color: #1980FF;
+}
+
+/* Minimum Maximum Group */
+.min-max-container{
+  padding-left: 20px;
+  width: 50%;
+  position: relative;
+}
+.min-max-container .ant-form-item{
+  margin-bottom: 0;
+}
+.min-max-number-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.min-max-number-input{
+  display: flex;
+  gap: 10px;
+}
+.min-max-placeholders{
+  display: flex;
+  justify-content: flex-end;
+  gap: 170px;
+  padding-right: 80px;
+  color: #1980ff4f;
+}
+
+
+/*Email Section*/
+.ant-collapse-borderless{
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.email-radio-section{
+  border-right: thin solid rgb(231, 231, 231)
+}
+.email-section .radio-component{
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 30px;
+  border: none;
+}
+.email-radio-section, .email-tag-section{
+  width: 50%;
+}
+.ant-collapse-content-box{
+  display: flex;
+}
+.email-tag-section{
+  padding-left: 30px;
+}
+.email-tag-row{
+  display: flex;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+.email-tag-row input{
+  height: 22px !important;
+  width: 30%;
+}
+.ant-input:focus,
+.ant-input-focused{
+  box-shadow: none;
+}
+.email-tag-row div{
+  display: flex;
+}
+
+/* Submit Button */
+.submit-button{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.submit-button .ant-form-item{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.ant-btn{
+  border-radius: 5px;
+}
+
+
+/*miscellaneous*/
+.group-label{
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+.subgroup-label{
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.todays-date{
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  color: rgb(181, 181, 181);
+}
+.error-box{
+  background-color: rgb(246, 170, 170);
+  border: 2px solid rgb(95, 37, 37);
+  padding: 5px 8px;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
 }
